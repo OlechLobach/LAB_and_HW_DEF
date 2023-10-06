@@ -1,9 +1,24 @@
-def display_quote(author, quote):
-    formatted_text = f'"{quote}"\n{author}'
-    print(formatted_text)
+while True:
+    def display_even_numbers():
+        try:
+            start = int(input("Введіть початкове число: "))
+            end = int(input("Введіть кінцеве число: "))
 
-quote = "Don't compare yourself with anyone in this world…\nif you do so, you are insulting yourself."
+            print(f"не парні числа між {start} і {end}:")
+            if start < end:
+                for num in range(start, end + 1):
+                    if num % 2 != 0:
+                        print(num)
+            else:
+                for num in range(end, start + 1):
+                    if num % 2 != 0:
+                        print(num)
+        except ValueError:
+            print("Будь ласка, введіть правильні числа.")
 
-author = "Bill Gates"
 
-display_quote(author, quote)
+    display_even_numbers()
+
+    продовжити = input('чи бажаєте ввести інші числа? (так/ні)')
+    if продовжити.lower() != 'так':
+        break
