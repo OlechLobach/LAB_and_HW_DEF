@@ -1,19 +1,13 @@
-def display_line(length, direction, symbol):
-    if direction == "horizontal":
-        print(symbol * length)
-    elif direction == "vertical":
-        for _ in range(length):
-            print(symbol)
-    else:
-        print("Неправильний напрямок. Виберіть 'horizontal' або 'vertical'.")
-
-length_h = int(input("Введіть горизонтальну довжину: "))
-symbol_h = input("Введіть символ для горизонтальної лінії: ")
-length_v = int(input("Введіть вертикальну довжину: "))
-symbol_v = input("Введіть символ для вертикальної лінії: ")
-direction_h = "horizontal"
-display_line(length_h, direction_h, symbol_h)
-
-
-direction_v = "vertical"
-display_line(length_v, direction_v, symbol_v)
+def find_max():
+    try:
+        num1 = float(input("Введіть перше число: "))
+        num2 = float(input("Введіть друге число: "))
+        num3 = float(input("Введіть третє число: "))
+        num4 = float(input("Введіть четверте число: "))
+        max_value = max(num1, num2, num3, num4)
+        return max_value
+    except ValueError:
+        print("Будь ласка, введіть правильні числа.")
+max_number = find_max()
+if max_number is not None:
+    print(f"Максимальне число: {max_number}")
