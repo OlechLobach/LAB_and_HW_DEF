@@ -1,14 +1,15 @@
-def display_square(side_length, symbol, filled):
-    if filled:
-        for _ in range(side_length):
-            print(symbol * side_length)
-    else:
-        print(symbol * side_length)
-        for _ in range(side_length - 2):
-            print(symbol + " " * (side_length - 2) + symbol)
-        print(symbol * side_length)
-side_length = int(input("Введіть довжину сторони квадрата: "))
-symbol = input("Введіть символ для відображення: ")
-filled = input("Заповнений квадрат (True) чи порожній (False)? (True/False): ").lower() == "true"
+def find_min():
+    try:
+        num1 = float(input("Введіть перше число: "))
+        num2 = float(input("Введіть друге число: "))
+        num3 = float(input("Введіть третє число: "))
+        num4 = float(input("Введіть четверте число: "))
+        min_value = min(num1, num2, num3, num4)
+        return min_value
+    except ValueError:
+        print("Будь ласка, введіть правильні числа.")
 
-display_square(side_length, symbol, filled)
+min_number = find_min()
+
+if min_number is not None:
+    print(f"Мінімальне число: {min_number}")
