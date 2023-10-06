@@ -5,8 +5,6 @@ while True:
             end = int(input("Введіть кінцеве число: "))
 
             print(f"Парні числа між {start} і {end}:")
-
-            # Перевірка, яке число є меншим і більшим
             if start < end:
                 for num in range(start, end + 1):
                     if num % 2 == 0:
