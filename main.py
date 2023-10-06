@@ -1,13 +1,20 @@
-def find_max():
-    try:
-        num1 = float(input("Введіть перше число: "))
-        num2 = float(input("Введіть друге число: "))
-        num3 = float(input("Введіть третє число: "))
-        num4 = float(input("Введіть четверте число: "))
-        max_value = max(num1, num2, num3, num4)
-        return max_value
-    except ValueError:
-        print("Будь ласка, введіть правильні числа.")
-max_number = find_max()
-if max_number is not None:
-    print(f"Максимальне число: {max_number}")
+def is_prime(number):
+    if number <= 1:
+        return False
+    if number <= 3:
+        return True
+    if number % 2 == 0 or number % 3 == 0:
+        return False
+    i = 5
+    while i * i <= number:
+        if number % i == 0 or number % (i + 2) == 0:
+            return False
+        i += 6
+
+
+num = int(input('введіть число для перевірки'))
+result = is_prime(num)
+if result:
+    print(f"{num} є простим числом.")
+else:
+    print(f"{num} не є простим числом.")
