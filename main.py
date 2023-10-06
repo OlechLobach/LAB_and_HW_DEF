@@ -1,12 +1,11 @@
-def calculate_product_in_range(start, end):
-    if start > end:
-        start, end = end, start
-    product = 1
-    for num in range(start, end + 1):
-        product *= num
-    return product
-start_range = int(input("Введіть початок діапазону: "))
-end_range = int(input("Введіть кінець діапазону: "))
-
-result = calculate_product_in_range(start_range, end_range)
-print(f"Добуток чисел у діапазоні від {start_range} до {end_range}: {result}")
+while True:
+    def count_digits(number):
+        num_str = str(number)
+        digit_count = len(num_str)
+        return digit_count
+    num = int(input("Введіть число: "))
+    result = count_digits(num)
+    print(f"Кількість цифр у числі {num}: {result}")
+    продовжити = input("Чи бажаєте підоахувати кількість цифр в іншому числі?(так/ні):")
+    if продовжити.lower() !='так':
+        break
