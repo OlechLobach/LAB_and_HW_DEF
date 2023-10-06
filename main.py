@@ -1,15 +1,12 @@
-def find_min():
-    try:
-        num1 = float(input("Введіть перше число: "))
-        num2 = float(input("Введіть друге число: "))
-        num3 = float(input("Введіть третє число: "))
-        num4 = float(input("Введіть четверте число: "))
-        min_value = min(num1, num2, num3, num4)
-        return min_value
-    except ValueError:
-        print("Будь ласка, введіть правильні числа.")
+def calculate_product_in_range(start, end):
+    if start > end:
+        start, end = end, start
+    product = 1
+    for num in range(start, end + 1):
+        product *= num
+    return product
+start_range = int(input("Введіть початок діапазону: "))
+end_range = int(input("Введіть кінець діапазону: "))
 
-min_number = find_min()
-
-if min_number is not None:
-    print(f"Мінімальне число: {min_number}")
+result = calculate_product_in_range(start_range, end_range)
+print(f"Добуток чисел у діапазоні від {start_range} до {end_range}: {result}")
